@@ -120,6 +120,10 @@ module.exports = {
     '/de/': {
       lang: 'de-DE',
       title: 'QOwnNotes',
+    }, 
+      '/hu/': {
+      lang: 'hu-HU',
+      title: 'QOwnNotes',
     },
     '/nl/': {
       lang: 'nl-NL',
@@ -269,6 +273,62 @@ module.exports = {
           {
             title: 'FAQ',
             children: utils.getNavItemsForLanguage(faqNavItems, "de")
+          }
+        ]
+      },
+            '/hu/': {
+        selectText: 'Nyelvek',
+        label: 'Magyar',
+        editLinkText: 'Segíts fejleszteni ezt az oldalt!',
+        algolia: {},
+        nav: [
+          {
+            text: 'Start',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'hu'),
+          },
+          {
+            text: 'Telepítés',
+            link: utils.getNavItemForLanguage(installationNavItem, 'hu'),
+          },
+          {
+            text: 'Changelog',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'Kapcsolat',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'Adományozás',
+            link: utils.getNavItemForLanguage(donateNavItem, 'hu'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'Start',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, "hu")
+          },
+          {
+            title: 'Telepítés',
+            children: utils.getNavItemsForLanguage(installationNavItems, "hu")
+          },
+          {
+            title: 'Szerkesztö',
+            children: utils.getNavItemsForLanguage(editorNavItems, "hu")
+          },
+          {
+            title: 'Szkriptek',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, "hu")
+          },
+          {
+            title: 'Hozzájárulok',
+            children: utils.getNavItemsForLanguage(contributingNavItems, "hu")
+          },
+          {
+            title: 'FAQ',
+            children: utils.getNavItemsForLanguage(faqNavItems, "hu")
           }
         ]
       },
