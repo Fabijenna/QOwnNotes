@@ -109,6 +109,7 @@ module.exports = {
     // ['script', { src: `https://cdn.jsdelivr.net/npm/vue/dist/vue.js` }],
     // ['script', { src: `https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js` }],
   ],
+
   locales: {
     // The key is the path for the locale to be nested under.
     // As a special case, the default locale can use '/' as its path.
@@ -468,67 +469,65 @@ module.exports = {
           }
         ]
       },
-‚/fa/': {
-selectText: ‚زبان',
-label: ‚فارسی',
-editLinkText: ‚در اصلاح این صفحه ما را یاری کنید!',
-algolia: {
-apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
-indexName: 'qownnotes'
-},
-nav: [
-   {
-text: 'شروع',
-link: utils.getNavItemForLanguage(gettingStartedNavItem, ‚fa'),
-},
-   {
-text: 'نصب',
-link: utils.getNavItemForLanguage(installationNavItem, ‚fa'),
-},
-   {
-text: 'گزارش تغییرات',
-link: changelogNavItem,
-collapsable: true,
-},
-   {
-text: 'تماس',
-ariaLabel: 'Contact Menu',
-items: contactNavItems
-},
-   {
-text: 'شروع',
- link: utils.getNavItemForLanguage(donateNavItem, ‚fa'),
-}
-],
-sidebar: [
-   {
-title: 'شروع',
-children: utils.getNavItemsForLanguage(gettingStartedNavItems, „fa")
-},
-   {
-title: 'نصب',
-children: utils.getNavItemsForLanguage(installationNavItems, „fa")
-},
-   {
-title: 'ویرایشگر',
-children: utils.getNavItemsForLanguage(editorNavItems, „fa")
-},
-   {
-title: 'اسکریپت نویسی',
-children: utils.getNavItemsForLanguage(scriptingNavItems, „fa")
-},
-   {
-title: 'مشارکت',
-children: utils.getNavItemsForLanguage(contributingNavItems, „fa")
-},
-   {
-    title: 'سؤالات متداول',
-    children: utils.getNavItemsForLanguage(faqNavItems, „fa")
-    }
-   ]
-  }
- }
-},
+      '/fa/': {
+        selectText: 'زبان',
+        label: 'فارسی',
+        editLinkText: 'در اصلاح این صفحه ما را یاری کنید!',
+        algolia: {
+          apiKey: '35f878f4b712d5ab6a659eb0a6c71576',
+          indexName: 'qownnotes'
+        },
+        nav: [
+          {
+            text: 'شروع',
+            link: utils.getNavItemForLanguage(gettingStartedNavItem, 'fa'),
+          },
+          {
+            text: 'نصب',
+            link: utils.getNavItemForLanguage(installationNavItem, 'fa'),
+          },
+          {
+            text: 'گزارش تغییرات',
+            link: changelogNavItem,
+            collapsable: true,
+          },
+          {
+            text: 'تماس',
+            ariaLabel: 'Contact Menu',
+            items: contactNavItems
+          },
+          {
+            text: 'کمک مالی',
+            link: utils.getNavItemForLanguage(donateNavItem, 'fa'),
+          }
+        ],
+        sidebar: [
+          {
+            title: 'شروع',
+            children: utils.getNavItemsForLanguage(gettingStartedNavItems, 'fa')
+          },
+          {
+            title: 'نصب',
+            children: utils.getNavItemsForLanguage(installationNavItems, 'fa')
+          },
+          {
+            title: 'ویرایشگر',
+            children: utils.getNavItemsForLanguage(editorNavItems, 'fa')
+          },
+          {
+            title: 'اسکریپت نویسی',
+            children: utils.getNavItemsForLanguage(scriptingNavItems, 'fa')
+          },
+          {
+            title: 'مشارکت',
+            children: utils.getNavItemsForLanguage(contributingNavItems, 'fa')
+          },
+          {
+            title: 'سؤالات متداول',
+            children: utils.getNavItemsForLanguage(faqNavItems, 'fa')
+          }
+        ]
+      },
       '/nl/': {
         selectText: 'Talen',
         label: 'Nederlands',
@@ -615,6 +614,7 @@ children: utils.getNavItemsForLanguage(contributingNavItems, „fa")
                 ? $site.themeConfig.domain + $page.frontmatter.image
                 : $page.frontmatter.image;
           }
+
           return $site.themeConfig.domain + '/screenshots/screenshot.png'
         },
       },
